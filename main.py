@@ -10,7 +10,10 @@ class App:
         pass
 
     def register(self):
-        pass
+        login = input("Digite o login: ")
+        senha = input("Digite a senha: ")
+        create_user(login, senha)
+        print("Usuário cadastrado com sucesso!")
 
     def get_login(self):
         pass
