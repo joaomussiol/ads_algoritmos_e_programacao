@@ -21,7 +21,30 @@ class App:
         user_exists(login, senha)
 
     def start(self):
-        pass
+        while True:
+            print("\n1 - Login")
+            print("2 - Cadastrar")
+            print("3 - Sair")
+
+            opcao = input("Escolha: ")
+
+            if opcao == "1":
+                login, senha = user_exists()
+                if self.validate_login(login, senha):
+                    print("Login realizado com sucesso!")
+                else:
+                    print("Login ou senha incorretos.")
+
+            elif opcao == "2":
+                self.register()
+
+            elif opcao == "3":
+                print("Saindo do sistema...")
+                break
+
+            else:
+                print("Opção inválida.")
+
 
 
 app = App()
