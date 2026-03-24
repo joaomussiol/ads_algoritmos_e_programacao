@@ -16,7 +16,9 @@ class App:
         print("Usuário cadastrado com sucesso!")
 
     def get_login(self):
-        pass
+        login = input("Login: ")
+        senha = input("Senha: ")
+        user_exists(login, senha)
 
     def start(self):
         pass
